@@ -2851,7 +2851,7 @@ function clearLocalstorage(){
 }
 
 function updateWordList(){
-	jVocabData=JSON.parse(localStorage.getItem('jvocab'));
+	jVocabData=JSON.parse(localStorage.getItem('jvocab')) ||{};
 	$("#wordList").html("");
 	$.each(jVocabData.words,function(i,item){
 		$("#wordList").append('<div>'+item.characters+'</div>');
